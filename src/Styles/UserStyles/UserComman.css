@@ -1,0 +1,5 @@
+.custom-link-path {
+  stroke: #ffffff !important;  /* White color */
+  stroke-width: 2px;
+  fill: none;
+}

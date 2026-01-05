@@ -1,0 +1,56 @@
+src/
+├── Admin/
+│   ├── Service/
+│   │   └── adminApi.js
+│   ├── Components/
+│   │   └── AdminNavbar.jsx
+│   ├── Layout/
+│   │   └── AdminLayout.jsx
+│   ├── Pages/
+│   │   ├── ard.jsx
+│   │   └── Login.jsx
+│   └── Auth/
+│       └── useAdminAuth.jsx
+│
+├── User/
+│   ├── Service/
+│   │   └── userApi.js
+│   ├── Components/
+│   │   └── UserNavbar.jsx
+│   ├── Layout/
+│   │   └── UserLayout.jsx
+│   ├── Pages/
+│   │   ├── Dashboard.jsx
+│   │   └── Login.jsx
+│   └── Auth/
+│       └── useUserAuth.jsx
+│
+├── Common/
+│   ├── Service/
+│   │   └── commonApi.js
+│   ├── Components/
+│   │   ├── CommonNavbar.jsx
+│   │   └── Footer.jsx
+│   ├── Layout/
+│   │   └── CommonLayout.jsx
+│   └── Pages/
+│       ├── HomePage.jsx
+│       └── NotFound.jsx
+│
+├── api/
+│   ├── axiosClient.js
+│   ├── queryClient.js
+│
+├── Routes/
+│   ├── AdminRoutes.jsx
+│   ├── UserRoutes.jsx
+│
+│
+│
+├── Config/
+│   └── appConfig.js
+│
+├── App.jsx
+├── main.jsx
+├── index.css
+└── vite.config.js

@@ -1,0 +1,11 @@
+/* Add to your global CSS or Tailwind config */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #234769;
+  border-radius: 4px;
+}
+
+
+

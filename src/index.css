@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: "montb";
+  src: url("/public/FONT/Montserrat-Bold.ttf");
+} */
+
+/* user variables  */
+:root {
+  --dark-bg: #121A1C;
+  --card-bg: #182C2D;
+  --text-light: #ffffff;
+  --text-secondary: #999999;
+  --accent-green: #0FC066;
+  --btn-primary: #0FC066;
+  --btn-secondary: linear-gradient(to right, #2E557C, #0FC066);
+  --wallet-purple: #5e4fff;
+  --wallet-red: #ff5e5e;
+  --wallet-green: #2ecc71;
+  --wallet-blue: #3498db;
+}
+
+
+/* customs fonts  */
+
+/* pera fonts  */
+.plight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.pregular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.pmedium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.pbold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hlight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.hmedium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.hbold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #363636 0%, #000000 100%);
+  
+}
+
+/* body {
+ background-color: #FFD700;
+  
+ 
+     
+} */
+.headroom {
+  z-index: 50 !important;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.glow-text {
+  color: #ffffff;
+  /* font-weight: bold; */
+  text-shadow:
+    0 0 5px rgb(2, 12, 84),
+    0 0 5px #0004ff5d,
+    /* 0 0 5px rgb(0, 255, 34),
+    0 0 10px rgb(0, 255, 47); */
+   0 0 5px rgb(250, 134, 31),
+    0 0 10px rgb(250, 134, 31);
+}
+
+/* gradients.css */
+/* .border-gradient {
+  border: 1px solid;
+  border-image: linear-gradient(45deg, #003366, #00cc66, #000000) 1;
+} */
+.border-gradient {
+  /* border: 1px solid;
+  border-image: linear-gradient(45deg, #003366, #00cc66, #000000) 1; */
+  border: 2px solid  rgb(237, 252, 25);
+  /* border-image: linear-gradient(135deg, #a7a6a6, #012413, #a3a3a3) 1; */
+  border-radius: 12px;
+}
+
+
+
+ 
+
+ 
