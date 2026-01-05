@@ -22,16 +22,16 @@ import logo2 from "../../../assets/userImages/Logo/MOXicon.png";
 
 const navItems = [
   { icon: <FaThLarge />, name: "Dashboard", path: "dashboard" },
-  {
-    icon: <MdTrendingUp />,
-    name: "Trade BOT",
-    subItems: [
-      { name: "Arbitrage", path: "arbitrage", pro: false },
-      { name: "Analytics", path: "analytics", pro: false },
-      { name: "History", path: "history", pro: false },
-      { name: "Profits", path: "profits", pro: false },
-    ],
-  },
+  // {
+  //   icon: <MdTrendingUp />,
+  //   name: "Trade BOT",
+  //   subItems: [
+  //     { name: "Arbitrage", path: "arbitrage", pro: false },
+  //     { name: "Analytics", path: "analytics", pro: false },
+  //     { name: "History", path: "history", pro: false },
+  //     { name: "Profits", path: "profits", pro: false },
+  //   ],
+  // },
   {
     icon: <FaMoneyBillWave />,
     name: "Deposit",

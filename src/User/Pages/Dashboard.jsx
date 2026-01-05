@@ -20,13 +20,13 @@ import { IoTodayOutline } from "react-icons/io5";
 import { MdOutlineCalendarMonth, MdAutorenew } from "react-icons/md";
 import { PiHandWithdrawDuotone } from "react-icons/pi";
 import logoicon from "../../../src/assets/userImages/Logo/MOXicon.png";
-import banner1 from "../../assets/userImages/images/embot-banner.png";
-import banner2 from "../../assets/userImages/images/embot-banner-2.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// import banner1 from "../../assets/userImages/images/embot-banner.png";
+// import banner2 from "../../assets/userImages/images/embot-banner-2.png";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Footer from "../Components/Comman/Footer";
 import Wallets from "./Wallets";
 import { useNavigate } from "react-router-dom";
@@ -310,7 +310,7 @@ const Dashboard = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-2xl uppercase   text-[#e8eaec] [text-shadow:0_0_5px_rgb(120,134,31),0_0_10px_rgb(120,134,31)] drop-shadow-[0_0_6px_rgba(244,214,77,0.6)]
+          <h1 className="text-2xl uppercase   text-[#e8eaec]  ]
  font-bold">
             Welcome, {dashboardData.userName}! Have a nice day!
           </h1>
@@ -353,43 +353,43 @@ const Dashboard = () => {
 
       {/* Row 1: Wallets */}
       <div className=" gap-4">
-        <div className="grid grid-cols-3  text-[#b5861f] sm:grid-cols-3 lg:grid-cols-4 gap-4 rounded-xl lg:col-span-2">
+        <div className="grid grid-cols-4  text-[#b5861f] sm:grid-cols-4 lg:grid-cols-4 gap-4 rounded-xl lg:col-span-2">
           {[
             {
               title: "Total Investment",
               value: dashboardData.wallets?.totalInvestment || "$0.00",
-              color: "bg-purple-500",
+              color: "bg-[radial-gradient(circle_at_center,#000000_45%,#1A1A1A_65%,#ffffff_100%)]",
               icon: <FaDollarSign />,
             },
 
             {
               title: "Available Wallet Balance",
               value: dashboardData.wallets?.totalWalletBalance || "$0.00",
-              color: "bg-sky-500",
+              color: "bg-[radial-gradient(circle_at_center,#000000_45%,#1A1A1A_65%,#ffffff_100%)]",
               icon: <FaDollarSign />,
             },
             {
               title: "Total ROI",
               value: dashboardData.incomes?.roiIncome || "$0.00",
-              color: "bg-orange-500",
+              color: "bg-[radial-gradient(circle_at_center,#000000_45%,#1A1A1A_65%,#ffffff_100%)]",
               icon: <FaChartLine />,
             },
             {
               title: "Total Level Rewards",
               value: dashboardData.incomes?.totalLevelRewards || "$0.00",
-              color: "bg-green-500",
+              color: "bg-[radial-gradient(circle_at_center,#000000_45%,#1A1A1A_65%,#ffffff_100%)]",
               icon: <FaBullseye />,
             },
             {
               title: "Total Referral Rewards",
               value: dashboardData.incomes?.levelIncome || "$0.00",
-              color: "bg-sky-500",
+              color: "bg-[radial-gradient(circle_at_center,#000000_45%,#1A1A1A_65%,#ffffff_100%)]",
               icon: <FaDollarSign />,
             },
             {
               title: "Total Earnings",
               value: dashboardData.profitTracker?.earning || "$0.00",
-              color: "bg-sky-500",
+              color: "bg-[radial-gradient(circle_at_center,#000000_45%,#1A1A1A_65%,#ffffff_100%)]",
               icon: <FaDollarSign />,
             },
           ].map((item, idx) => (
@@ -417,7 +417,8 @@ const Dashboard = () => {
             {
               name: "My Wallet",
               balance: dashboardData.wallets?.myWallet || "0.00",
-            },
+            }
+            ,
             {
               name: "Principle Wallet",
               balance: dashboardData.wallets?.principleWallet || "0.00",
@@ -442,7 +443,7 @@ const Dashboard = () => {
               >
                 <div className="flex  flex-col-reverse gap-3 justify-between">
                   <h2 className="text-sm font-semibold flex items-center gap-2">
-                    <FaWallet className="text-primary " />
+                    <FaWallet className="text-[#C9A24F]" />
                     {wallet.name}
                   </h2>
                   <span className="text-xs text-slate-400">
@@ -513,7 +514,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
         <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] flex  flex-col justify-between backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50">
           <div className="mb-5">
-            <h3 className="text-lg font-semibold text-primary mb-2">
+            <h3 className="text-lg font-semibold text-[#e9a002] mb-2">
               TOTAL INCOMES
             </h3>
             <p className="text-sm leading-tight text-gray-300">
@@ -523,7 +524,7 @@ const Dashboard = () => {
           </div>
           <div className="flex justify-center mb-4">
             <div className="relative">
-              <div className="w-44 h-44 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+              <div className="w-44 h-44 bg-gradient-to-r from-[#b5861f] to-[#b5861f]  rounded-full flex items-center justify-center">
                 <GiTakeMyMoney className="h-20 w-20" />
               </div>
               <div className="absolute -top-1 -right-1 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
@@ -557,11 +558,11 @@ const Dashboard = () => {
         <div className="space-y-5">
           <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50">
             <div
-              className={`w-8 h-8 bg-green-500 mb-3 rounded-full flex items-center justify-center`}
+              className={`w-8 h-8 bg-[#b5861f] mb-3 rounded-full flex items-center justify-center`}
             >
               <FaUsers />
             </div>
-            <h3 className="text-lg font-semibold text-primary mb-4">
+            <h3 className="text-lg font-semibold text-[#e9a002]  mb-4">
               REFERRAL LINK
             </h3>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 bg-slate-700 rounded-lg p-3">
@@ -573,7 +574,7 @@ const Dashboard = () => {
               />
               <button
                 onClick={handleCopy}
-                className="bg-primary mt-3 sm:mt-0 hover:bg-[#38a861] px-4 py-1 rounded text-sm transition-colors"
+                className="bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] text-black mt-3 sm:mt-0 hover:opacity-80 px-4 py-1 rounded text-sm transition-colors"
               >
                 {copied ? "Copied!" : "Copy"}
               </button>
@@ -581,7 +582,7 @@ const Dashboard = () => {
           </div>
 
           <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50">
-            <h3 className="text-lg font-semibold text-primary mb-4">
+            <h3 className="text-lg font-semibold text-[#e9a002] mb-4">
               TEAM BUSINESS OVERVIEW
             </h3>
             <div className="space-y-4 ">
@@ -604,7 +605,7 @@ const Dashboard = () => {
               ].map((item, idx) => (
                 <div key={idx} className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-[radial-gradient(circle_at_center,#000000_45%,#1A1A1A_65%,#ffffff_100%)] rounded-full flex items-center justify-center">
                       <FaUsers className="w-3 h-3" />
                     </div>
                     <span className="text-sm">{item.text}</span>
@@ -617,7 +618,7 @@ const Dashboard = () => {
         </div>
 
         <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50">
-          <h3 className="text-lg font-semibold text-primary mb-4">
+          <h3 className="text-lg font-semibold text-[#e9a002] mb-4">
             PROFIT TRACKER
           </h3>
           <div className="space-y-2 text-sm">
@@ -656,7 +657,7 @@ const Dashboard = () => {
                 loader={<div className="text-white">Loading chart...</div>}
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-[#b5861f] to-[#b5861f]  rounded-full flex items-center justify-center">
                   <GiProfit className="text-white w-10 h-10" />
                 </div>
               </div>
@@ -666,14 +667,14 @@ const Dashboard = () => {
       </div>
 
       {/* Row 3: Team + Investment */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
-        <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50 flex flex-col justify-center text-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6 items-stretch ">
+        <div className="flex-1 bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50 flex flex-col justify-center text-center h-full">
           <div
-            className={`w-full mb-4 h-14 mx-auto bg-gradient-to-br from-green-500 to-secondary rounded-md flex items-center justify-center`}
+            className={`w-full mb-4 h-14 mx-auto bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] rounded-md flex items-center justify-center`}
           >
             <TbPigMoney className="text-2xl" />
           </div>
-          <h3 className="text-lg font-semibold text-primary mb-4">
+          <h3 className="text-lg font-semibold text-[#e9a002] mb-4">
             INVESTMENT OVERVIEW
           </h3>
           <p className="text-sm text-slate-400">Total Investment</p>
@@ -682,11 +683,11 @@ const Dashboard = () => {
           </p>
         </div>
 
-        <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] flex-col justify-center backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50">
+        <div className=" flex-1 bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] flex flex-col justify-center backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50">
           <div className="grid grid-cols-2 gap-4 text-center">
             <div className="space-y-4">
               <div
-                className={`w-full h-14 mx-auto bg-gradient-to-br from-green-500 to-secondary rounded-md flex items-center justify-center`}
+                className={`w-full h-14 mx-auto  bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] rounded-md flex items-center justify-center`}
               >
                 <MdOutlineCalendarMonth className="text-2xl" />
               </div>
@@ -697,7 +698,7 @@ const Dashboard = () => {
             </div>
             <div className="space-y-4">
               <div
-                className={`w-full h-14 mx-auto bg-gradient-to-br from-green-500 to-secondary rounded-md flex items-center justify-center`}
+                className={`w-full h-14 mx-auto bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] rounded-md flex items-center justify-center`}
               >
                 <IoTodayOutline className="text-2xl" />
               </div>
@@ -709,7 +710,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className=" md:col-span-1 ">
+        {/* <div className=" md:col-span-1 ">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             pagination={{ clickable: true }}
@@ -732,7 +733,7 @@ const Dashboard = () => {
               />
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> */}
 
         {/* <div className="md:col-span-2 bg-[#12212154] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50 text-center">
           <h3 className="text-lg font-semibold text-primary mb-4">TRANSACTIONS</h3>
@@ -779,7 +780,7 @@ const Dashboard = () => {
             className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000]backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50"
           >
             <div
-              className={`w-14 mb-4 h-14 mx-auto bg-gradient-to-br from-purple-500 to-secondary rounded-xl flex items-center justify-center`}
+              className={`w-14 mb-4 h-14 mx-auto bg-gradient-to-r from-[#b5861f] to-[#b5861f] rounded-xl flex items-center justify-center`}
             >
               {label.icon}
             </div>
@@ -789,7 +790,7 @@ const Dashboard = () => {
         ))}
 
         <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] lg:col-span-2 backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50 text-center">
-          <h3 className="text-lg font-semibold text-primary mb-4">
+          <h3 className="text-lg font-semibold text-[#e9a002] mb-4">
             EASY MONEY TOKEN OVERVIEW
           </h3>
           <div className="flex items-center justify-center mx-auto mb-3">
@@ -806,15 +807,15 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
         <div className="relative lg:col-span-2 bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50">
           <div className="absolute right-0 top-0">
-            <BiSolidOffer className="text-[6rem] text-green-500" />
+            <BiSolidOffer className="text-[6rem] text-[#b5861f]" />
           </div>
           <div className="flex items-center gap-4">
             <div
-              className={`w-14 mb-4 h-14 glow-text bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center`}
-            >
+              className={`w-14 mb-4 h-14 glow-text bg-gradient-to-r from-[#b5861f] to-[#b5861f] rounded-full flex items-center justify-center`}
+            > 
               <GrAnnounce className="text-2xl" />
             </div>
-            <h3 className="text-lg font-semibold glow-text text-primary mb-4">
+            <h3 className="text-lg font-semibold glow-text text-[#e9a002] mb-4">
               LATEST ANNOUNCEMENT
             </h3>
           </div>
@@ -828,14 +829,14 @@ const Dashboard = () => {
           </p>
         </div>
         <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border-gradient p-6 border border-slate-700 shadow-md shadow-slate-800/50 text-center">
-          <h3 className="text-lg font-semibold text-primary mb-4">
+          <h3 className="text-lg font-semibold text-[#e9a002] mb-4">
             LEVEL ACHIEVEMENT
           </h3>
           <div className="text-yellow-500 font-bold mb-2">
             {dashboardData.wallets.latestLevelRank || "N/A"}
           </div>
           <button
-            className="bg-secondary hover:bg-sky-700 text-white py-2 px-4 rounded text-sm"
+            className="bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] hover:opacity-80 text-black py-2 px-4 rounded text-sm"
             onClick={() => navigate("/user/lavel-income-report")}
           >
             View Report

@@ -283,14 +283,14 @@ const InvestmentReport = () => {
 
   return (
     <>
-      <div className="bg-[#12212154] backdrop-blur-xl border border-slate-700 shadow-md shadow-slate-800/50 text-white p-6 rounded-md max-w-full mx-auto">
+      <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border-2 border-[rgb(237,252,25)]  backdrop-blur-xl border border-slate-700 shadow-md shadow-slate-800/50 text-white p-6 rounded-md max-w-full mx-auto">
         <div className="flex justify-between mb-6 gap-4 flex-wrap-reverse">
-          <h2 className="text-2xl font-bold">Investment Report</h2>
+          <h2 className="text-2xl font-bold text-[#e9a002]">Investment Report</h2>
           <button
             onClick={exportToExcel}
-            className="px-3 py-1 h-fit text-base border flex items-center justify-center gap-2 border-slate-600 rounded bg-slate-800 hover:bg-slate-700 transition"
+            className="px-3 border-2 border-[rgb(237,252,25)] py-1 h-fit text-base bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] flex items-center justify-center gap-2 rounded  transition"
           >
-            <PiMicrosoftExcelLogo className="text-green-600" />
+            <PiMicrosoftExcelLogo className="text-yellow-500" />
             <span>Export</span>
           </button>
         </div>
@@ -371,7 +371,7 @@ const InvestmentReport = () => {
           )}
         </div>
 
-        <div className="mt-6 flex md:flex-row flex-col gap-4 items-center justify-between text-sm">
+        <div className="mt-6 flex text-[#e9a002] md:flex-row flex-col gap-4 items-center justify-between text-sm">
           <div>
             Page {table.getState().pagination.pageIndex + 1} of{" "}
             {table.getPageCount()}

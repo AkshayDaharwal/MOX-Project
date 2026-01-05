@@ -103,7 +103,7 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="w-full h-fit md:h-screen overflow-hidden shadow-xl flex flex-col-reverse md:flex-row">
+    <div className="w-full h-fit md:h-screen bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] overflow-hidden shadow-xl flex flex-col-reverse md:flex-row">
       <div className="w-full h-screen md:w-1/2 bg-[#1a152d] relative">
         <img src={loginimg} alt="Join Community" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-between p-6">
@@ -138,7 +138,7 @@ const SignUpPage = () => {
           <div className="mb-5">
             <img src={logo} className="w-20" alt="Logo" />
           </div>
-          <h2 className="text-3xl font-bold mb-4">Create your account</h2>
+          <h2 className="text-3xl font-bold mb-4 text-[#e9a002] ">Create your account</h2>
           <p className="text-sm text-gray-400 mb-6">
             Join us and get started on your journey. Fill in the details below to sign up.
           </p>
@@ -151,10 +151,10 @@ const SignUpPage = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className={`w-full px-4 py-3 rounded-md bg-secondary/10 border ${
+                className={`w-full px-4 py-3 text-white rounded-md bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border ${
                   errors.email ? "border-red-500" : "border-white/10"
                 } focus:outline-none focus:ring-2 ${
-                  errors.email ? "focus:ring-red-500" : "focus:ring-primary"
+                  errors.email ? "focus:ring-red-500" : "focus:ring-0 focus:border-[rgb(237,252,25)] focus:border-2"
                 }`}
                 disabled={isLoading}
                 autoFocus
@@ -174,10 +174,10 @@ const SignUpPage = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Password"
-                className={`w-full px-4 py-3 rounded-md bg-secondary/10 border ${
+                className={`w-full px-4 py-3 rounded-md bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border ${
                   errors.password ? "border-red-500" : "border-white/10"
                 } focus:outline-none focus:ring-2 ${
-                  errors.password ? "focus:ring-red-500" : "focus:ring-primary"
+                  errors.password ? "focus:ring-red-500" : "focus:ring-0 focus:border-[rgb(237,252,25)] focus:border-2"
                 }`}
                 disabled={isLoading}
                 aria-label="Password input"
@@ -191,7 +191,7 @@ const SignUpPage = () => {
                 }`}
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                {showPassword ? <FaEyeSlash /> : <FaEye className="text-[#e9a002]"/>}
               </button>
               {errors.password && (
                 <p className="text-red-500 text-xs mt-1" role="alert">
@@ -207,10 +207,10 @@ const SignUpPage = () => {
                 value={formData.reenterpassword}
                 onChange={handleChange}
                 placeholder="Re-enter Password"
-                className={`w-full px-4 py-3 rounded-md bg-secondary/10 border ${
+                className={`w-full px-4 py-3 rounded-md bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border ${
                   errors.reenterpassword ? "border-red-500" : "border-white/10"
                 } focus:outline-none focus:ring-2 ${
-                  errors.reenterpassword ? "focus:ring-red-500" : "focus:ring-primary"
+                  errors.reenterpassword ? "focus:ring-red-500" : "focus:ring-0 focus:border-[rgb(237,252,25)] focus:border-2"
                 }`}
                 disabled={isLoading}
                 aria-label="Confirm password input"
@@ -224,7 +224,7 @@ const SignUpPage = () => {
                 }`}
                 aria-label={showReenterPassword ? "Hide confirm password" : "Show confirm password"}
               >
-                {showReenterPassword ? <FaEyeSlash /> : <FaEye />}
+                {showReenterPassword ? <FaEyeSlash /> : <FaEye className="text-[#e9a002]" />}
               </button>
               {errors.reenterpassword && (
                 <p className="text-red-500 text-xs mt-1" role="alert">
@@ -240,7 +240,7 @@ const SignUpPage = () => {
                 value={formData.referral}
                 onChange={handleChange}
                 placeholder="Referral Code"
-                className="w-full px-4 py-3 rounded-md bg-secondary/10 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-4 py-3 rounded-md bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border border-white/10 focus:outline-none focus:ring-0 focus:border-[rgb(237,252,25)] focus:border-2"
                 disabled={isLoading}
                 aria-label="Referral code input"
               />
@@ -295,7 +295,7 @@ const SignUpPage = () => {
               <button
                 type="button"
                 onClick={handleConnectWallet}
-                className="w-full py-3 rounded-md bg-gradient-to-br from-[#2298d341] to-[#05CE99] hover:opacity-90 transition-colors font-semibold"
+                className="w-full py-3 rounded-md text-black bg-gradient-to-r from-[#D4AA3F] via-[#B9902F] to-[#9E7C1F] hover:opacity-80 transition-colors font-semibold"
                 aria-label="Connect wallet button"
               >
                 Connect Wallet
@@ -309,7 +309,7 @@ const SignUpPage = () => {
               Already have an account?{" "}
               <Link
                 to="/user/login"
-                className="text-secondary underline-offset-4 hover:underline text-nowrap"
+                className="text-[#e9a002] underline-offset-4  hover:underline text-nowrap"
                 aria-label="Sign in link"
               >
                 Sign In

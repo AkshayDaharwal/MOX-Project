@@ -151,7 +151,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="w-full h-fit md:h-screen overflow-hidden shadow-xl flex flex-col-reverse md:flex-row">
+    <div className="w-full bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] h-fit md:h-screen overflow-hidden shadow-xl flex flex-col-reverse md:flex-row">
       <div className="w-full md:w-1/2 bg-[#1a152d] relative">
         <img src={loginimg} alt="Login" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-between p-6">
@@ -185,7 +185,7 @@ const LoginPage = () => {
           <div className="mb-5">
             <img src={logo} className="w-20" alt="Logo" />
           </div>
-          <h2 className="text-3xl font-bold mb-4">Sign in to your account</h2>
+          <h2 className="text-3xl text-[#e9a002] font-bold mb-4">Sign in to your account</h2>
           <p className="text-sm text-gray-400 mb-6">
             {otpRequested
               ? "Enter the OTP sent to your email to complete login."
@@ -194,16 +194,17 @@ const LoginPage = () => {
           <form className="space-y-4" onSubmit={handleSubmit} noValidate>
             <div>
               <input
+                
                 type="email"
                 name="email"
                 placeholder="Email"
                 autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 rounded-md bg-secondary/10 border ${
+                className={`w-full px-4 py-3  text-white rounded-md bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border ${
                   errors.email ? "border-red-500" : "border-white/10"
                 } focus:outline-none focus:ring-2 ${
-                  errors.email ? "focus:ring-red-500" : "focus:ring-primary"
+                  errors.email ? "focus:ring-red-500" : "focus:ring-0 focus:border-[rgb(237,252,25)] focus:border-2"
                 }`}
                 disabled={isLoading || otpRequested}
                 autoFocus
@@ -223,10 +224,10 @@ const LoginPage = () => {
                 autoComplete="current-password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 rounded-md bg-secondary/10 border ${
+                className={`w-full px-4 py-3 rounded-md bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border ${
                   errors.password ? "border-red-500" : "border-white/10"
                 } focus:outline-none focus:ring-2 ${
-                  errors.password ? "focus:ring-red-500" : "focus:ring-primary"
+                  errors.password ? "focus:ring-red-500" : "focus:ring-0 focus:border-[rgb(237,252,25)] focus:border-2"
                 }`}
                 disabled={isLoading || otpRequested}
                 aria-label="Password input"
@@ -235,12 +236,12 @@ const LoginPage = () => {
                 type="button"
                 onClick={() => setShowPassword((prev) => !prev)}
                 disabled={isLoading || otpRequested}
-                className={`absolute right-3 top-4 mix-blend-difference text-white text-lg hover:text-gray-300 transition-colors ${
+                className={`absolute right-3 top-4  text-white text-lg hover:text-gray-300 transition-colors ${
                   isLoading || otpRequested ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                {showPassword ? <FaEyeSlash className="text-[#e9a002]"/> : <FaEye className="text-[#e9a002]" />}
               </button>
               {errors.password && (
                 <p className="text-red-500 text-sm mt-1" role="alert">
@@ -286,7 +287,7 @@ const LoginPage = () => {
               </label>
               <Link
                 to="/user/forgot-password"
-                className="text-secondary hover:underline"
+                className="text-[#e9a002] hover:underline"
                 aria-label="Forgot password link"
               >
                 Forgot password?
@@ -294,7 +295,7 @@ const LoginPage = () => {
             </div>
             <button
               type="submit"
-              className={`w-full py-3 rounded-md bg-gradient-to-br from-[#2298d341] to-[#05CE99] hover:opacity-90 transition-colors font-semibold ${
+              className={`w-full py-3 rounded-md text-black bg-gradient-to-r from-[#D4AA3F] via-[#B9902F] to-[#9E7C1F] hover:opacity-80 transition-colors font-semibold ${
                 isLoading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={isLoading}
@@ -345,7 +346,7 @@ const LoginPage = () => {
               Want to create an account?{" "}
               <Link
                 to="/user/signup"
-                className="text-secondary text-nowrap underline-offset-4 hover:underline"
+                className="text-[#e9a002] text-nowrap underline-offset-4 hover:underline"
                 aria-label="Sign up link"
               >
                 Sign Up

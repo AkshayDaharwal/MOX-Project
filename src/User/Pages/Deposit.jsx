@@ -252,10 +252,10 @@ const Deposit = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10 ">
         <Wallets />
       </div>
-      <div className="bg-[#12212154] backdrop-blur-xl border border-slate-700 shadow-md shadow-slate-800/50 text-white p-5 rounded-md max-w-2xl mx-auto">
+      <div className="bg-gradient-to-b border-2 border-[rgb(237,252,25)] from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl shadow-md shadow-slate-800/50 text-white p-5 rounded-md max-w-2xl mx-auto">
         <div className="flex justify-center mb-6 border-b border-slate-600 gap-4">
           {/* <button
             className={`px-4 py-2 rounded-t ${method === 'qr' ? 'text-white border-b-2 border-sky-400 bg-gradient-to-b from-primary/50 to-sky-400/50' : 'bg-slate-800/50'}`}
@@ -265,7 +265,7 @@ const Deposit = () => {
           </button> */}
 
           <button
-            className={`px-4 py-2 rounded-t bg-slate-800/50 text-slate-400 cursor-not-allowed`}
+            className={`px-4 py-2 rounded-t text-white bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] cursor-not-allowed`}
             disabled
           >
             Deposit via Cryptapi (Disabled)
@@ -273,7 +273,7 @@ const Deposit = () => {
           <button
             className={`px-4 py-2 rounded-t md:text-base text-sm ${
               method === "wallet"
-                ? "text-white border-b-2 border-sky-400 bg-gradient-to-b from-primary/50 to-sky-400/50"
+                ? "border-yellow-900 border-b-2  bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000]"
                 : "bg-slate-800/50"
             }`}
             onClick={() => setMethod("wallet")}
@@ -350,7 +350,7 @@ const Deposit = () => {
           <div className="space-y-6 mt-10">
             <div className="flex flex-col items-center justify-center gap-4">
               <button
-                className="flex items-center gap-2 px-4 py-2 bg-secondary hover:bg-sky-700 rounded text-sm font-semibold"
+                className="flex items-center gap-2 px-4 py-2 hover:opacity-90 text-black bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] rounded text-sm font-semibold"
                 onClick={handleConnectWallet}
               >
                 <FaWallet /> {isConnected ? "Connected" : "Connect Wallet"}
@@ -370,7 +370,7 @@ const Deposit = () => {
               )}
             </div>
             <div>
-              <label className="block text-sm font-semibold mb-1">
+              <label className="block text-sm font-semibold mb-1 ">
                 Enter Amount (USD)
               </label>
               <input
@@ -389,7 +389,7 @@ const Deposit = () => {
             </div>
             <button
               onClick={handleDeposit}
-              className="w-full bg-green-600 hover:bg-green-700 py-2 rounded text-sm font-semibold disabled:bg-gray-600 flex items-center justify-center"
+              className="w-full bg-gradient-to-r cursor-pointer text-black from-[#FFD978] via-[#F6C453] to-[#D9A441] hover:opacity-90 cursior:pointer py-2 rounded text-sm font-semibold disabled:bg-gray-600 flex items-center justify-center"
               disabled={!isConnected || isLoading || !!validationError}
             >
               {isLoading ? (

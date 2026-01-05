@@ -177,14 +177,14 @@ const DepositReport = () => {
   };
 
   return (
-    <div className="bg-[#12212154] backdrop-blur-xl border border-slate-700 border-gradient shadow-md shadow-slate-800/50 text-white p-6 rounded-md max-w-full mx-auto">
+    <div className="bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] backdrop-blur-xl border border-slate-700 border-gradient shadow-md shadow-slate-800/50 text-white p-6 rounded-md max-w-full mx-auto">
       <div className="flex justify-between mb-6 gap-4 flex-wrap-reverse">
-        <h2 className="text-2xl text-primary font-bold">Deposit Report</h2>
+        <h2 className="text-2xl text-[#e9a002] font-bold">Deposit Report</h2>
         <button
           onClick={exportToExcel}
-          className="px-3 py-1 h-fit text-base border flex items-center justify-center gap-2 border-slate-600 rounded bg-slate-800 hover:bg-slate-700 transition"
+          className="px-3 py-1 h-fit text-base flex items-center justify-center gap-2 border-2 border-[rgb(237,252,25)] rounded bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] hover:bg-yellow-600 hover:opacity-70 transition"
         >
-          <PiMicrosoftExcelLogo className="text-green-600" /> <span>Export</span>
+          <PiMicrosoftExcelLogo className="text-yellow-500" /> <span>Export</span>
         </button>
       </div>
 
@@ -195,20 +195,20 @@ const DepositReport = () => {
           value={globalFilter ?? ''}
           onChange={(e) => setGlobalFilter(e.target.value)}
           placeholder="Search transaction hash, currency, wallet, or status..."
-          className="flex-1 px-4 py-2 bg-transparent border border-slate-500 rounded text-white focus:outline-none"
+          className="flex-1 px-4 py-2 bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border border-slate-500 rounded text-white focus:outline-none"
         />
         <select
           value={walletFilter}
           onChange={(e) => setWalletFilter(e.target.value)}
-          className="px-4 py-2 bg-transparent bg-slate-700 border border-slate-500 rounded focus:outline-none"
+          className="px-4 py-2 bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000]  border border-slate-500 rounded focus:outline-none"
         >
-          <option value="" className="bg-slate-700 text-white">
+          <option value="" className="bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] text-black">
             All Wallets
           </option>
-          <option value="Principle" className="bg-slate-700 text-white">
+          <option value="Principle" className="bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] text-black">
             Principle Wallet
           </option>
-          <option value="My Wallet" className="bg-slate-700 text-white">
+          <option value="My Wallet" className="bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] text-black">
             My Wallet
           </option>
         </select>
@@ -271,7 +271,7 @@ const DepositReport = () => {
 
       {/* Pagination Controls */}
       <div className="mt-6 flex md:flex-row flex-col gap-4 items-center justify-between text-sm">
-        <div className="text-secondary">
+        <div className="text-[#e9a002]">
           Page {table.getState().pagination.pageIndex + 1} of{' '}
           {table.getPageCount()}
         </div>

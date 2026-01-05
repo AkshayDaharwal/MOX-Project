@@ -182,9 +182,9 @@ const MyProfile = () => {
 
   return (
     <>
-      <div className="bg-[#12212154] backdrop-blur-xl border border-slate-700 border-gradient shadow-md shadow-slate-800/50 text-white p-5 rounded-md">
+      <div className=" backdrop-blur-xl bg-gradient-to-b from-[#2A2A2A] via-[#000000] to-[#000000] border border-slate-700 border-gradient shadow-md shadow-slate-800/50 text-white p-5 rounded-md">
         {/* Tabs */}
-        <div className="flex border-b border-slate-600 mb-6">
+        <div className="flex border-b border-yellow-600 mb-6">
           {["Personal Details", "Password Details"].map((tab, idx) => (
             <button
               key={idx}
@@ -193,8 +193,8 @@ const MyProfile = () => {
               }
               className={`px-4 py-2 text-sm font-semibold ${
                 activeTab === (idx === 0 ? "personal" : "password")
-                  ? "text-white border-b-2 border-blue-400 bg-gradient-to-b from-green-400/20 to-sky-400/50 rounded-t"
-                  : "text-slate-400"
+                  ? "text-black border-b-2 border-yellow-900 bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] rounded-t"
+                  : "text-[#e9a002]"
               }`}
             >
               {tab}
@@ -211,7 +211,7 @@ const MyProfile = () => {
             <div className="space-y-6">
               <div>
                 <label className="text-sm mb-1 font-bold flex items-center gap-2">
-                  <FaEnvelope className="text-sky-500" /> Email Id
+                  <FaEnvelope className="text-[#b5861f]" /> Email Id
                 </label>
                 <input
                   type="email"
@@ -219,7 +219,7 @@ const MyProfile = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className={`w-full bg-transparent border-b ${
-                    errors.email ? "border-red-500" : "border-slate-500"
+                    errors.email ? "border-red-500" : "border-yellow-600 "
                   } focus:outline-none text-white`}
                 />
                 {errors.email && (
@@ -228,7 +228,7 @@ const MyProfile = () => {
               </div>
               <div>
                 <label className="text-sm mb-1 font-bold flex items-center gap-2">
-                  <FaWallet className="text-sky-500" /> Wallet Address
+                  <FaWallet className="text-[#b5861f]" /> Wallet Address
                 </label>
                 <input
                   type="text"
@@ -236,7 +236,7 @@ const MyProfile = () => {
                   value={formData.walletAddress}
                   onChange={handleInputChange}
                   className={`w-full bg-transparent border-b ${
-                    errors.walletAddress ? "border-red-500" : "border-slate-500"
+                    errors.walletAddress ? "border-red-500" : "border-yellow-600 "
                   } focus:outline-none text-white`}
                 />
                 {errors.walletAddress && (
@@ -269,7 +269,7 @@ const MyProfile = () => {
               (field, idx) => (
                 <div className="relative" key={idx}>
                   <label className="text-sm mb-1 font-bold flex items-center gap-2">
-                    <FaKey className="text-sky-500" />{" "}
+                    <FaKey className="text-[#b5861f]" />{" "}
                     {field.replace(/([A-Z])/g, " $1")}
                   </label>
                   <input
@@ -282,7 +282,7 @@ const MyProfile = () => {
                     value={formData[field]}
                     onChange={handleInputChange}
                     className={`w-full bg-transparent border-b ${
-                      errors.password ? "border-red-500" : "border-slate-500"
+                      errors.password ? "border-red-500" : "border-yellow-600 "
                     } focus:outline-none text-white pr-10`}
                   />
                   <span
@@ -296,9 +296,9 @@ const MyProfile = () => {
                     className="absolute right-2 top-7 text-slate-400 cursor-pointer"
                   >
                     {showPassword[field.replace("Password", "").toLowerCase()] ? (
-                      <FaEyeSlash />
+                      <FaEyeSlash className="text-[#e9a002]" />
                     ) : (
-                      <FaEye />
+                      <FaEye className="text-[#e9a002]"/>
                     )}
                   </span>
                 </div>
@@ -309,7 +309,7 @@ const MyProfile = () => {
             )}
             <button
               type="submit"
-              className="px-6 py-2 bg-green-600 hover:bg-green-700 transition-colors text-white text-sm rounded"
+              className="px-6 py-2 bg-gradient-to-r from-[#FFD978] via-[#F6C453] to-[#D9A441] hover:bg-green-700 transition-colors text-black font-bold text-sm rounded"
               disabled={loading}
             >
               {loading ? "Resetting..." : "Reset Password"}

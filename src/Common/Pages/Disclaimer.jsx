@@ -46,7 +46,7 @@ const Disclaimer = () => {
     scrollToElement();
   }, [location1]);
 
-
+                
 
   return (
     <>
